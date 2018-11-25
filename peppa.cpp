@@ -8,7 +8,7 @@ T v(T x,T y,T t){return y*cos(t)-x*sin(t);}
 T fa(T x,T y){return fmin(c(x,y,0.5),c(x*0.47+0.15,y+0.25,0.3));}
 T no(T x,T y){return c(x*1.2+0.97,y+0.25,0.2);}
 T nh(T x,T y){return fmin(c(x+0.9,y+0.25,0.03),c(x+0.75,y+0.25,0.03));}
-T ea(T x,T y){return fmin(c(x*1.7+0.3,y+0.7,0.15),c(u(x,y,0.25)*1.7,v(x,y,0.25)+0.65,0.15));}
+T ea(T x,T y){return fmin(c(x*1.7+0.  3,y+0.7,0.15),c(u(x,y,0.25)*1.7,v(x,y,0.25)+0.65,0.15));}
 T ey(T x,T y){return fmin(c(x+0.4,y+0.35,0.1),c(x+0.15,y+0.35,0.1));}
 T pu(T x,T y){return fmin(c(x+0.38,y+0.33,0.03),c(x+0.13,y+0.33,0.03));}
 T fr(T x,T y){return c(x*1.1-0.3,y+0.1,0.15);}
