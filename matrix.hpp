@@ -115,6 +115,9 @@ namespace sjtu {
 			mat = new T[rowNum * colNum + 1];
 			size_t cnt = 0;
 			for(auto i : o) {
+				if(i.size() != colNum) {
+					delete []mat;
+				}
 				ASSERT(i.size() == colNum, "invalid initializer_list");
 				for(T j : i) {
 					mat[cnt++] = j;
