@@ -3,8 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-
-using namespace std;
+#include <functional>  
 using sjtu::Matrix;
 
 std::pair<bool, std::string> RE(const std::string &name)
@@ -200,4 +199,3 @@ int main()
 	}
 	return 0;
 }
-

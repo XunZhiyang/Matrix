@@ -5,7 +5,7 @@
 #include <initializer_list>
 #include <utility>
 #include <iterator>
-#define ASSERT(expr, message) if(!(expr)); //throw std::invalid_argument(message);
+#define ASSERT(expr, message) if(!(expr)) throw std::invalid_argument(message);
 using std::size_t;
 
 namespace sjtu {
@@ -145,6 +145,7 @@ namespace sjtu {
 			delete []mat;
 			rowNum = _n;
 			colNum = _m;
+			mat = p;
 		}
 
 		void resize(std::pair<size_t, size_t> sz, T _init = T()) {
@@ -390,7 +391,7 @@ namespace sjtu {
 		}
 		return tmp;
 	}
-	
+
 	template <class U, class V>
 	auto operator+(const Matrix<U> &a, const Matrix<V> &b) {
 		ASSERT(a.homomorphic(b), "invalid plus");
